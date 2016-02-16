@@ -8,7 +8,7 @@ html {
 }
 
 body {
-  background-image: url('../images/avalanche.jpg');
+  background-image: url('../images/Avalanche.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   margin:0;
@@ -25,8 +25,8 @@ body {
 
 }
 
- hr {
- border: 0;
+hr {
+  border: 0;
   height: 1px; 
   background: #004767;
   margin: 0;
