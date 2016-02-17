@@ -22,7 +22,7 @@
     </div>
   </header>
 
-  <section class="start-quiz hidden">
+  <section class="start-quiz">
     <div class="content">
       
       <div class="left">
@@ -37,15 +37,15 @@
     </div>
   </section>
 
-  <section class="quiz ">
-    <div class="content">
+  <section class="quiz hidden">
+    <div class="center-container">
       <div class="question-number">
         <h5>Question <span class="current-question">1</span> of 5</h5>
       </div>
       <div class="quiz-questions">
         <h3 class="question">For the best chance of survival, who do you rely on most to dig you out of the snow?</h3>
       </div>
-      <div class="center-container">
+      
         <div class="answer-left">
           <span class="answer" id="answer-1">Trained avalanche dogs</span>
         </div>
@@ -58,12 +58,12 @@
         <div class="answer-right">
           <span class="answer" id="answer-4">Your partners</span>
         </div>
-      </div>
+      
     </div>
   </section>
 
-  <section class="quiz-control">
-    <div class="content">
+  <section class="quiz-control hidden">
+    
       <div class="center-container">
         <div class="score-container">
           <h1 class="score-count">Score: <span class="score">0</span></h1>
@@ -71,14 +71,20 @@
         <div class="btn-right">
           <a href="#" class="button button-flat-primary btn-next-question">Next Question</a>
         </div>
-      </div>
-      <div class="center-container">
-        <div class="facts">
-          <h3 class="fun-fact">An avalanche victim only has 15 minutes for a good chance to be recovered alive. The best chance for survival is to rely on nearby partners.</h3>
-        </div>
-      </div> 
+      
     </div>
   </section>
+
+  <section class="facts hidden">
+    
+      <div class="center-container">
+        <div class="facts-container"
+          <h3 class="fun-fact">An avalanche victim only has 15 minutes for a good chance to be recovered alive. The best chance for survival is to rely on nearby partners.</h3>
+        </div>
+    
+    </div>
+  </section>
+  <script src="http://code.jquery.com/jquery.min.js"></script>
   <script src="js/script.js"></script>
   <script src="js/buttons.js"></script>
 </body>
