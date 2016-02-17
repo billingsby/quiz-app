@@ -1,6 +1,5 @@
 html {
   box-sizing: border-box;
-  
 }
 
 *, *:before, *:after {
@@ -29,8 +28,11 @@ hr {
   border: 0;
   height: 1px; 
   background: #004767;
-  margin: 0;
-  
+  margin-top: 3em;
+}
+
+.hidden {
+  display: none;
 }
 
 /* Header */
@@ -44,7 +46,7 @@ hr {
   font-weight: 700;
   font-size: 2em;
   color: #004767;
-  margin:0 0 -.5em 0;
+  margin:0;
 
 }
 
@@ -60,23 +62,26 @@ hr {
   height: auto;
 }
 
+
 /* Quiz Start */
 
 .start-quiz .content {
-  padding-top: 3em;
+  padding-top: 2em;
 }
 
 .start-quiz .left {
   width: 50%;
   float: left;
   margin: 0;
+
 }
 
 .start-quiz .right {
   width: 50%;
   float: right;
   margin: 0;
-  padding-top: 2em;
+  padding-top: 1em;
+
 }
 
 .start-quiz .left > img {
@@ -85,7 +90,125 @@ hr {
   padding: 1em;
 }
 
-.start-quiz .btn-quiz-start {
-  width: 100%;
+.btn-center {
+  margin: 0 auto;
 }
 
+.start-quiz .btn-quiz-start {
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}
+
+/* Quiz */
+
+.quiz .question-number {
+  width: 70%;
+  margin:2em auto 0 auto;
+  padding: 0;
+}
+
+.quiz .question-number h5 {
+  margin: .5em 0;
+}
+.quiz .quiz-questions {
+  width: 70%;
+  margin: 0 auto 1em auto;
+  background-color: rgba(0,71,103,0.8);
+  color: white;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+
+.quiz .quiz-questions .question {
+  padding: 1em 1.5em;
+  font-size: 1em;
+  margin:0;
+}
+
+.quiz .center-container {
+  width: 70%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.quiz .center-container .answer-left, .answer-right {
+  background-color: rgba(64,179,223,0.75);
+  border: 1px solid #004767;
+  width:50%;
+  height:175px;
+  text-align: center;
+  padding:0
+  margin: 0;
+  line-height: 175px;
+}
+
+.quiz .center-container .answer-left {
+  float: left;
+}
+
+.quiz .center-container .answer-right {
+  float: right;
+}
+
+.quiz .center-container span {
+ font-weight: 700;
+}
+
+/* Score */
+
+
+
+.quiz-control .center-container {
+  width: 70%;
+  margin: 1em auto;
+  overflow: hidden;
+}
+
+.quiz-control .center-container .score-container {
+  margin: 0;
+  padding-right: 0;
+  width: 48%;
+  height: 4em;
+  text-align: center;
+  background-color: #eeeeee;
+  color: #004767;
+  line-height: 4em;
+  float:left;
+
+}
+
+.quiz-control .score-container .score-count {
+  margin: 0;
+}
+
+.quiz-control .center-container .btn-right {
+  margin: 0;
+  padding-left: 1em;
+  width: 50%;
+  float:right;
+}
+
+.quiz-control .center-container .btn-next-question {
+  width: 100%;
+  height: 4em;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 4em;
+}
+
+.quiz-control .facts  {
+  clear: both;
+  margin: 1em 0 5em 0;
+  padding: 1em 1.2em;
+  background-color: #333333;
+  border-radius: 3px;
+
+}
+
+.quiz-control .facts .fun-fact {
+  margin: 0 auto;
+  color: white;
+}
