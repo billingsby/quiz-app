@@ -1,8 +1,7 @@
 $(document).ready(function(){
 
 $('.btn-quiz-start').click(function() {
-  $('.start-quiz').toggle();
-  $('.quiz, .quiz-control').toggle();
+  $('.start-quiz, .quiz, .quiz-control').toggle();
   selectAnswer();
 });
 
@@ -55,9 +54,6 @@ function selectAnswer() {
   $('.quiz').on('click','#one, #two, #three, #four', function() {
     chosenAnswer = $(this).attr('id');
     correctAnswer = questions[numQuestion].correct;
-    
-   
-  
     // Change color of divs according to answer
     if (chosenAnswer != null) {
       answered();
@@ -90,9 +86,7 @@ function selectAnswer() {
     if (chosenAnswer != null) {
       validated = true;
     }
-
-    return;
-    
+  return;
   };
 
 function answered() {
