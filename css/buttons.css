@@ -279,7 +279,7 @@ button.button:disabled {
     -webkit-transition-duration: 0s;
     transition-duration: 0s;
     background: #1495b7;
-    color: #00647f; }
+    color: #005065; }
   /* line 350, ../scss/partials/_buttons.scss */
   .button-flat-primary.disabled {
     -moz-box-shadow: none;
