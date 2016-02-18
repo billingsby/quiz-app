@@ -3,6 +3,7 @@ $(document).ready(function(){
 $('.btn-quiz-start').click(function() {
   $('.start-quiz').toggle();
   $('.quiz, .quiz-control').toggle();
+  selectAnswer();
 });
 
 var questions = [{
@@ -40,35 +41,28 @@ var questions = [{
     correct: "three",
     fact: "The chance of survival in an avalanche significantly improves if you and your friends carry transceivers and gear and know how to use this equipment properly."
   }];
-
+  
 // Global variables
   var numCorrect = 0;
   var numQuestion = 0;
   var validated = false;
   var chosenAnswer = null;
+  var correctAnswer = null;
   
 // Selected answer function
-  $('.quiz').on('click', '#one, #two, #three, #four', function() {
+function selectAnswer() {
+  $('.quiz').on('click','#one, #two, #three, #four', function() {
     chosenAnswer = $(this).attr('id');
-    var correctAnswer = questions[numQuestion].correct;
+    correctAnswer = questions[numQuestion].correct;
     var newId = "#" + correctAnswer;
-   
-
-    // Change color of divs according to answer
-    if (chosenAnswer == correctAnswer) {
-      
-      $('this').removeAttr('class').addClass('correct');
-      numCorrect += 1;
-    } else {
-      $('this').removeAttr('class').addClass('incorrect');
-      $('newId').removeAttr('class').addClass('correct');
-    }
-    
-    // Update score and fade-in fact
-    $('.score').text(numCorrect);
-    $('.facts').fadeIn();
+   console.log(chosenAnswer);
   });
-
+    // Change color of divs according to answer
+    if (chosenAnswer != null) {
+      answered();
+    }
+  
+}
 // User click next question
   $('.btn-next-question').click(function() {
       validate();
@@ -87,15 +81,28 @@ var questions = [{
 
 // Determine if answer has been selected
   function validate() {
-    
-      if (chosenAnswer != null) {
-        validated = true;
-        console.log(validated);
-      }
+    if (chosenAnswer != null) {
+      validated = true;
+    }
+
     return;
     
   };
 
+function answered() {
+  if (chosenAnswer == correctAnswer) {
+      console.log('true');
+      $('chosenAnswer').toggleClass('correct');
+      numCorrect += 1;
+    } else {
+      $('this').removeAttr('class').addClass('incorrect');
+      $('newId').removeAttr('class').addClass('correct');
+    }
+    
+    // Update score and fade-in fact
+    $('.score').text(numCorrect);
+    $('.facts').fadeIn();
+}
 
 // Reset quiz and display new question and answers
   function nextQuestion() {
@@ -121,7 +128,7 @@ var questions = [{
       $('.button-flat-primary').css('background','#74AB00');
       $('.btn-next-question').text("Quiz Complete!");
       $('.btn-next-question').on('click', function() {
-        $(this).prop('disabled', true);
+      $(this).prop('disabled', true);
       });
     }
   }
