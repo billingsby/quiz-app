@@ -49,33 +49,39 @@ var questions = [{
   var chosenAnswer = null;
   var correctAnswer = null;
   
+  
 // Selected answer function
 function selectAnswer() {
   $('.quiz').on('click','#one, #two, #three, #four', function() {
     chosenAnswer = $(this).attr('id');
     correctAnswer = questions[numQuestion].correct;
-    var newId = "#" + correctAnswer;
-   console.log(chosenAnswer);
-  });
+    
+   
+  
     // Change color of divs according to answer
     if (chosenAnswer != null) {
       answered();
     }
-  
-}
+  })
+};
+
 // User click next question
   $('.btn-next-question').click(function() {
       validate();
 // Alert message if answer has not been chosen when button clicked
       if (validated == true){
+        console.log('validated');
         numQuestion += 1;
         nextQuestion();
       } else  {
         console.log("false");
         alert("Please choose an answer");
       }
+      $('#' + chosenAnswer).removeClass('correct incorrect');
+      $('#' + correctAnswer).removeClass('correct incorrect');
 // Reset validation variables
       chosenAnswer = null;
+      newId = "";
       validated = false;
   });
 
@@ -91,18 +97,17 @@ function selectAnswer() {
 
 function answered() {
   if (chosenAnswer == correctAnswer) {
-      console.log('true');
-      $('chosenAnswer').toggleClass('correct');
+      $('#' + correctAnswer).addClass('correct');
       numCorrect += 1;
     } else {
-      $('this').removeAttr('class').addClass('incorrect');
-      $('newId').removeAttr('class').addClass('correct');
+      $('#' + chosenAnswer).addClass('incorrect');
+      $('#' + correctAnswer).addClass('correct');
     }
     
     // Update score and fade-in fact
     $('.score').text(numCorrect);
     $('.facts').fadeIn();
-}
+};
 
 // Reset quiz and display new question and answers
   function nextQuestion() {
