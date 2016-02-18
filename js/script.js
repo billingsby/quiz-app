@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 $('.btn-quiz-start').click(function() {
-  $('.start-quiz, .quiz, .quiz-control').toggle();
+  $('.start-quiz, .quiz, .quiz-control, .divider').toggle();
   selectAnswer();
 });
 
@@ -58,6 +58,7 @@ function selectAnswer() {
     if (chosenAnswer != null) {
       answered();
     }
+
   })
 };
 
@@ -101,6 +102,14 @@ function answered() {
     // Update score and fade-in fact
     $('.score').text(numCorrect);
     $('.facts').fadeIn();
+
+    if (numQuestion == 4) {
+      $('.button-flat-primary').css('background','#74AB00');
+      $('.btn-next-question').text("Show Results!");
+      $('.btn-next-question').on('click', function() {
+       finishQuiz();
+      });
+    }
 };
 
 // Reset quiz and display new question and answers
@@ -123,13 +132,13 @@ function answered() {
       $('#answer-4').text(answerFour);
       var newFact = questions[numQuestion].fact;
       $('.facts-container').text(newFact);
-    } else {
-      $('.button-flat-primary').css('background','#74AB00');
-      $('.btn-next-question').text("Quiz Complete!");
-      $('.btn-next-question').on('click', function() {
-      $(this).prop('disabled', true);
-      });
-    }
+    } 
+    
+  };
+
+  function finishQuiz() {
+    $('.finish-quiz, .quiz, .quiz-control, .facts').toggle();
+    
   }
 
 

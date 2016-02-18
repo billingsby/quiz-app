@@ -11,6 +11,7 @@
 
 </head>
 <body>
+<div class="wrapper">
   <header class="app-head">
     <div class="content">
       <div class="header-right">
@@ -45,23 +46,58 @@
 
   <section class="start-quiz">
     <div class="content">
-      
-      
       <div class="left">
-      <h2 class="reality">Reality Check</h2>
-       <p>Backcountry terrain is neither patrolled nor controlled by professionals, so if you're planning on traveling into the backcountry, it’s important to be well trained in avalanche safety and search and rescue techniques. Continued education is key to playing it safe while you're out. This quiz will test some of your knowledge about avalanche awareness.</p>
+        <h2 class="reality">Backcountry Reality</h2>
+        <p>Backcountry terrain is neither patrolled nor controlled by professionals, so if you're planning on traveling into the backcountry, it’s important to be well trained in avalanche safety and search and rescue techniques. Continued education is key to playing it safe while you're out. This quiz will test some of your knowledge about avalanche awareness.</p>
         <div class="btn-center">
         <button type="button" class="button button-flat-primary btn-quiz-start">Start Quiz</button>
-      </div>
-      <div class="right">
-       
         </div>
       </div>
     </div>
   </section>
 
+  <section class="finish-quiz hidden">
+    <div class="content">
+      <div class="final-score">
+        <h3>You scored <span class="score">1</span> out of <strong>5</strong></h3>
+      </div>
+
+      <h2 class="reality">Reality Check</h2>
+
+      <div class="third-left">
+        <span class="statistic deaths">
+        20-40
+        </span>
+        <p><strong>20 to 40 people die</strong> in avalanches each year in North America.</p>
+      </div>
+
+      <div class="third-middle">
+        <span class="statistic ninety">
+        90%
+        </span>
+        <p><strong>90%</strong> of deaths are from slides triggered by the victim or members of the victim's group.</p>
+      </div>
+
+      <div class="third-right">
+        <span class="statistic thirty">
+        30%
+        </span>
+        <p>There is only a <strong>30%</strong> chance of survival when buried by an avalanche.</p>
+      </div>
+    </div>
+
+      <div class="center-container">
+        <h2 class="reality">The good news is</h2>
+        <p>Avalanches aren't magic. If you know what to look for and what to avoid, you can drastically decrease your chances of getting caught. Education is key. Consider attending an <a href="http://avtraining.org/aiare-level-1/" target="blank"><span>AIARE 1 Certification</span></a> to train and increase your knowledge about avalanches.</p>
+      </div>
+    
+  </section>
+
   <section class="quiz hidden">
     <div class="center-container">
+      <div class="know">
+        <h2>How well do you <span>know?</span></h2>
+      </div>
       <div class="question-number">
         <h5>Question <span class="current-question">1</span> of 5</h5>
       </div>
@@ -107,6 +143,7 @@
     
     </div>
   </section>
+</div>
   <script src="http://code.jquery.com/jquery.min.js"></script>
   <script src="js/script.js"></script>
   <script src="js/buttons.js"></script>

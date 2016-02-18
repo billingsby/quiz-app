@@ -14,7 +14,11 @@ body {
   padding:0;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
-  height: 90em;
+  
+}
+
+.wrapper {
+  height: 1500px;
 }
 
 .content {
@@ -100,6 +104,11 @@ body {
   float:right;
   display: inline;
 }
+
+.header-right span {
+  color: #444444;
+}
+
 .logo-position {
   display: block;
   
@@ -182,31 +191,26 @@ body {
 .start-quiz .left {
   width: 50%;
   float: left;
-  margin: 0;
+  left: 4em;
+  position: relative;
   text-align: center;
 
-}
-
-.start-quiz .right {
-  width: 50%;
-  float: right;
-  margin: 0;
-  padding-top: 1em;
 
 }
 
-.start-quiz .reality {
+.reality {
   font-family: 'Bitter', serif;
   font-weight: 400;
-  font-size: 4.75vw;
+  font-size: 3.5vw;
   color: #004767;
   margin: 0;
 }
 
 .start-quiz .left p {
-  color: #565656;
+  color: #444444;
   text-align: left;
   padding-left: .75em;
+  margin-bottom: 2em;
 }
 
 .btn-center {
@@ -224,6 +228,30 @@ body {
 
 /* Quiz */
 
+.quiz {
+  margin-top: 5em;
+  overflow: hidden;
+}
+
+.quiz .know {
+ 
+  margin: 0 auto;
+  text-align: center;
+}
+
+.quiz .know h2 {
+  font-family: 'Bitter', serif;
+  font-weight: 700;
+  font-size: 3vw;
+  color: #444444;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: .9em;
+}
+
+.quiz .know span {
+  color: #A8CB17;
+}
 
 .quiz .question-number {
   
@@ -240,7 +268,7 @@ body {
   background-color: rgba(0,71,103,0.8);
   color: white;
   border-radius: 3px;
-  overflow: hidden;
+  
 }
 
 
@@ -347,4 +375,83 @@ body {
 .facts .facts-container .fun-fact {
   margin: 0 2em;
   
+}
+
+/* Finish Quiz */
+.finish-quiz .content {
+  text-align: center;
+  margin: 6em auto 0 auto;
+  padding:0;
+  width: 90%;
+  overflow: hidden;
+}
+
+.third-left {
+  width: 33.33%;
+  float: left;
+  margin-top: 5em;
+  padding:0 .5em;
+}
+
+.third-middle {
+  float:left;
+  margin-top: 5em;
+  width: 33.33%;
+  padding:0 .5em;
+}
+
+.third-right {
+  margin-top: 5em;
+  width: 33.33%;
+  float: right;
+  padding:0 .5em;
+}
+
+.finish-quiz .statistic {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 48px;
+  height: 200px;
+  line-height: 200px;
+  width: 200px;
+}
+
+.finish-quiz .thirty {
+  background: url('../images/thirty.png') center center no-repeat;
+}
+
+.finish-quiz .ninety {
+  background: url('../images/ninety.png') center center no-repeat;
+}
+
+.finish-quiz .deaths {
+  background: url('../images/north-america.png') center center no-repeat;
+  width: 345px;
+}
+
+.finish-quiz .center-container {
+  text-align: center;
+  margin: 3em auto;
+  padding: 0;
+  width: 90%;
+  height: auto;
+  overflow: hidden;
+}
+
+.finish-quiz .reality {
+
+}
+
+.finish-quiz a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #004767;
+}
+
+.finish-quiz a:hover {
+  color: #40b3df;
+}
+
+.score {
+  font-weight: bold;
 }
