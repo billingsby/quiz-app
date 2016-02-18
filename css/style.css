@@ -141,7 +141,7 @@ body {
   /*top: -600px;*/
 }
 
-.divider .dot {
+.divider .dot, .dot-bottom {
   width: 25px;
   position: relative;
   height: 25px;
@@ -161,14 +161,6 @@ body {
   margin:0 auto;
   z-index: 99999;
   float: inherit;
-}
-
-.bottom {
-  position: relative;
-  
-  bottom:0;
-  
-
 }
 
 .divider-line  {

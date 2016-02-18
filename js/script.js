@@ -137,7 +137,7 @@ function answered() {
   };
 
   function finishQuiz() {
-    $('.finish-quiz, .quiz, .quiz-control, .facts').toggle();
+    $('.finish-quiz, .quiz, .quiz-control, .facts, .divider, .dot-bottom, .snowpit').toggle();
     
   }
 
