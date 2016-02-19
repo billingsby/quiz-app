@@ -74,8 +74,8 @@ function selectAnswer() {
         console.log("false");
         alert("Please choose an answer");
       }
-      $('#' + chosenAnswer).css('background-color', 'rgba(64,179,223,0.75)');
-      $('#' + correctAnswer).css('background-color', 'rgba(64,179,223,0.75)');
+      $('#' + chosenAnswer).css('background', '#40B3DF');
+      $('#' + correctAnswer).css('background', '#40B3DF');
 // Reset validation variables
       chosenAnswer = null;
       newId = "";
@@ -92,11 +92,11 @@ function selectAnswer() {
 
 function answered() {
   if (chosenAnswer == correctAnswer) {
-      $('#' + correctAnswer).css('background-color', 'rgba(116,171,0,0.75)');
+      $('#' + correctAnswer).css('background', '#A8CB17');
       numCorrect += 1;
     } else {
-      $('#' + chosenAnswer).css('background-color', 'rgba(205,18,49,0.75)');
-      $('#' + correctAnswer).css('background-color', 'rgba(116,171,0,0.75)');
+      $('#' + chosenAnswer).css('background', '#FA2A00');
+      $('#' + correctAnswer).css('background', '#A8CB17');
     }
     
     // Update score and fade-in fact
